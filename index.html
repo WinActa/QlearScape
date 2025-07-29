@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QlearScape</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #ffffff;
+      margin: 0;
+      padding: 2rem;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      color: #555;
+      margin-bottom: 2rem;
+    }
+    input {
+      width: 80%;
+      max-width: 400px;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    button {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      color: white;
+      background: black;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #333;
+    }
+    .report {
+      max-width: 600px;
+      margin: 2rem auto 0;
+      text-align: left;
+      border-top: 1px solid #eee;
+      padding-top: 2rem;
+    }
+    .report h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .report ul {
+      list-style: none;
+      padding: 0;
+    }
+    .report li {
+      margin-bottom: 0.5rem;
+    }
+    .report ul ul {
+      list-style: disc;
+      margin-left: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>QlearScape</h1>
+  <p>Rewriting the rules of insurance efficiency. Built for agents. Powered by intelligence.</p>
+
+  <input id="address" type="text" placeholder="Enter property address" />
+  <br />
+  <button onclick="generateReport()">Generate Property Report</button>
+
+  <div id="report" class="report" style="display:none;">
+    <h2>Qlear Property Report</h2>
+    <ul>
+      <li><strong>1. Purchase Date:</strong> 06/15/2019</li>
+      <li><strong>2. Purchase Price:</strong> $435,000</li>
+      <li><strong>3. Construction Built Date:</strong> 2004</li>
+      <li><strong>4. Market Value:</strong> $512,000</li>
+      <li><strong>5. Square Footage:</strong> 2,140 sq ft</li>
+      <li><strong>6. Beds & Baths:</strong> 4 beds / 2.5 baths</li>
+      <li><strong>7. Type of Home:</strong> Single-family residence</li>
+      <li><strong>8. Estimated Mortgage (PITI) Breakdown:</strong>
+        <ul>
+          <li>Principal & Interest: $2,050</li>
+          <li>Property Tax: $425</li>
+          <li>Insurance: $135</li>
+          <li>Total: $2,610</li>
+        </ul>
+      </li>
+      <li><strong>9. County:</strong> Snohomish</li>
+      <li><strong>10. Flood Zone:</strong> Likely X</li>
+    </ul>
+  </div>
+
+  <script>
+    function generateReport() {
+      const address = document.getElementById('address').value;
+      if (address.trim()) {
+        document.getElementById('report').style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>
